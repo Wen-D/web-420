@@ -1,8 +1,17 @@
+/** 
+========================================
+; Title:  API Gateway Part II
+; Author: Wendy Leon
+; Date:   10/23/20
+; Description: API Gateway Part II
+;=======================================
+**/
 var express = require('express');
 var path = require('path');
 var createError = require('http-errors');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+var apiCatalog = require('./routes/api-catalog');
 
 var indexRouter = require('./routes/index');
 var mongoose = require('mongoose');
@@ -29,7 +38,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-
+app.use('/api', apiCatalog); 
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
