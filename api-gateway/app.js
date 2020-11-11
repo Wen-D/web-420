@@ -6,10 +6,10 @@
 ; Description: API Gateway Part II
 ;=======================================
 **/
-var express = require('express');
-var path = require('path');
-var createError = require('http-errors');
-var cookieParser = require('cookie-parser');
+var express = require('express'); //
+var path = require('path'); //
+var createError = require('http-errors');  //
+var cookieParser = require('cookie-parser'); //
 var logger = require('morgan');
 var apiCatalog = require('./routes/api-catalog');
 

@@ -1,3 +1,12 @@
+/** 
+========================================
+; Title:  API Gateway Part II
+; Author: Wendy Leon
+; Date:   10/23/20
+; Description: API Gateway Part II
+;=======================================
+**/
+
 var express = require('express');
 var router = express.Router();
 

@@ -29,7 +29,7 @@ exports.user_register = function(req, res) {
         var token = jwt.sign({ id: user._id}, config.web.secret, {
             expiresIn: 86400 // 24 hrs
         });
-        res.status(200).send({auth: true, token: toke});    
+        res.status(200).send({auth: true, token: token});    
     });
 };
 
