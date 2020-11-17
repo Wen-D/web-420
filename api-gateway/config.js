@@ -10,7 +10,7 @@
 
 var config = {};
 config.web = {};
-config.web.port = process.env.PORT || '8000';
+config.web.port = process.env.PORT || '4101';
 module.exports = config;
 
 config.web.secret = 'topsecret';
