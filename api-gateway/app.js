@@ -1,12 +1,3 @@
-/** 
-========================================
-; Title:  API Gateway Part II
-; Author: Wendy Leon
-; Date:   10/23/20
-; Description: API Gateway Part II
-;=======================================
-**/
-
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
@@ -15,8 +6,9 @@ var logger = require('morgan');
 var mongoose = require('mongoose');
 mongoose.Promise = require('bluebird');
 
+
 var indexRouter = require('./routes/index');
-var apiCatalog = require('./routes/api-catalog'); 
+var apiCatalog = require('./routes/api-catalog'); //part ll
 
 var app = express();
 
@@ -24,7 +16,7 @@ var app = express();
 mongoose.connect('mongodb+srv://admin:admin@buwebdev-cluster-1.oqsoi.mongodb.net/api-gateway', {
   promiseLibrary: require('bluebird')
 }).then( () => console.log('Connection Successful!'))
-.catch( (err) => console.error(err));
+.catch( () => console.error(err));
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -37,7 +29,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-app.use('/api', apiCatalog);
+app.use('/api', apiCatalog); //part ll
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
