@@ -1,3 +1,12 @@
+/** 
+========================================
+; Title:  config.js
+; Author: Wendy Leon
+; Date:   10/16/20
+; modified: 10/23/20
+; Description:config.js
+;=======================================
+**/
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
